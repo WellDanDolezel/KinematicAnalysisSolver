@@ -32,7 +32,7 @@ for ii = 1:length(T)
     Qd(:, ii) = qd;
 
     % acceleration level analysis
-    qdd = -constraints_dq(sys, q) \ constraints_g(sys, q, qd, t); 
+    qdd = constraints_dq(sys, q) \ constraints_g(sys, q, qd, t); 
     Qdd(:,ii) = qdd;
 
 end
